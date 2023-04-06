@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#131B23',
+    color: '#ffffff'
   },
   input: {
     marginBottom: 16,
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
   },
   buttonGradient: {
-    padding: 10,
+    padding: 5,
     borderRadius: 5,
     alignSelf: "stretch",
     backgroundColor: "#9E5313"
