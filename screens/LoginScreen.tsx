@@ -45,14 +45,18 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
   const handleChangePassword = (text: string) => setPassword(text);
 
   useEffect(() => {
-    axios.get("https://dummyjson.com/users").then((response) => {
-      // console.log(response, "response");
-      console.log(response?.data?.users, "users");
-      setUsers(response?.data?.users);
-    });
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get("https://dummyjson.com/users");
+        console.log(response?.data?.users, "users");
+        setUsers(response?.data?.users);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchUsers();
   }, []);
-
-  console.log(users);
+  
 
   const handleLogin = () => {
     if (users && Array.isArray(users)) {

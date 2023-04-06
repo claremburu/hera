@@ -8,6 +8,8 @@ type HomeScreenRouteProp = RouteProp<RootStackParamList, 'Home'>;
 
 type Props = {
   route: HomeScreenRouteProp;
+  username: string;
+  token: string;
 };
 
 const HomeScreen: React.FC<Props> = ({ route }) => {
